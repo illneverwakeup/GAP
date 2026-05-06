@@ -1,0 +1,15 @@
+input:
+  excel_path: "examples/example_5x12.xlsx"
+  sheet_name: 0
+
+method:
+  name: "BB"
+  objective: "all"   # all, 1/efficiency, 2/resources, 3/workload
+  require_each_employee_used: true
+
+output:
+  prefix: "BB_analysis_ready"
+  directory: "results"
+  write_excel: true
+  write_log: true
+  verbose: true
