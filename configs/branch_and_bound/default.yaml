@@ -1,0 +1,15 @@
+input:
+  excel_path: "GA_data_big_size.xlsx"
+  sheet_name: 0
+
+method:
+  name: "BB"
+  objective: "all"
+  require_each_employee_used: true
+
+output:
+  prefix: "BB_analysis_ready"
+  directory: "results"
+  write_excel: true
+  write_log: true
+  verbose: true
