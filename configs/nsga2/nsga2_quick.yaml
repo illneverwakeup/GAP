@@ -1,0 +1,35 @@
+input:
+  excel_path: "GA_data_big_size.xlsx"
+  sheet_name: 0
+
+method:
+  name: "NSGAII"
+  require_each_employee_used: true
+  use_repair: true
+  use_penalty: true
+  save_only_feasible_results: true
+  resource_penalty_multiplier: 100.0
+  unused_employee_penalty_multiplier: 10.0
+
+ideal_points:
+  use_bb: true
+  use_cache: true
+  cache_path: "ideal_points_cache.xlsx"
+
+ga:
+  pop_sizes: [100]
+  crossover_rates: [0.8]
+  mutation_rates: [0.02]
+  generations: [200]
+  repeats: 3
+  mutation_indpb: 0.02
+
+random:
+  seed: 42
+  numpy_seed: 42
+
+output:
+  prefix: "GA_NSGAII_analysis_ready"
+  directory: "results"
+  write_log: true
+  verbose: true
