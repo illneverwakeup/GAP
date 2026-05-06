@@ -1,0 +1,16 @@
+[project]
+name = "gap-nsga2"
+version = "0.1.0"
+description = "User-friendly NSGA-II runner for multi-objective GAP experiments"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "pandas",
+    "openpyxl",
+    "deap",
+    "pyyaml",
+    "tqdm",
+]
+
+[project.scripts]
+gap-nsga2 = "gap_nsga2.cli:main"
